@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -23,14 +24,15 @@ Logger log = Logger.getLogger(GUILoader.class.getName());
 public void showStart() {
 		
 		try {
-			
+			rootLayout = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(GUILoader.class.getResource("view/main.fxml"));
+			loader.setLocation(GUILoader.class.getResource("/view/main.fxml"));
 			
-			AnchorPane login;
-			login = (AnchorPane) loader.load();
+			AnchorPane mainx;
+			mainx = (AnchorPane) loader.load();
 		
-			rootLayout.setCenter(login);
+			rootLayout.setCenter(mainx);
+			
 		}
 		catch (IOException e) {
 			e.printStackTrace();

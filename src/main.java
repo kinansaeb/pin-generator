@@ -11,6 +11,7 @@ public class main extends Application {
 		try {		
 			GUILoader gui = new GUILoader();
 			gui.primaryStage = primaryStage;
+			primaryStage.setTitle("PIN-Generator DPMA");
 			gui.showStart();
 			primaryStage.show();
 		} catch(Exception e) {
