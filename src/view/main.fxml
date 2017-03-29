@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
    <children>
-      <Button layoutX="175.0" layoutY="248.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="250.0" text="DpmaDirektPro-Bestätigungs-Pin" />
-      <Label layoutX="138.0" layoutY="45.0" prefHeight="35.0" prefWidth="352.0" text="DpmaDirektPro-Pin Generator" textAlignment="CENTER">
+      <Button fx:id="confirmationPinButton" layoutX="175.0" layoutY="248.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="250.0" text="DpmaDirektPro-Bestätigungs-Pin" />
+      <Label fx:id="dpmadirektpropingenerator" layoutX="138.0" layoutY="45.0" prefHeight="35.0" prefWidth="352.0" text="DpmaDirektPro-Pin Generator" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="175.0" layoutY="130.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="250.0" text="DpmaDirektPro-Unlock-Pin" />
+      <Button fx:id="unlockPinButton" layoutX="175.0" layoutY="130.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="250.0" text="DpmaDirektPro-Unlock-Pin" />
    </children>
 </AnchorPane>

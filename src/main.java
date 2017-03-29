@@ -1,25 +1,23 @@
 
+
+
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-
-
+import javafx.stage.Stage;
 public class main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {		
-			GUILoader gui = new GUILoader();
-			gui.primaryStage = primaryStage;
-			primaryStage.setTitle("PIN-Generator DPMA");
-			gui.showStart();
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
+	public static void main(String[] args) {
+		Application.launch(main.class, args);
+	}
+		@Override
+		public void start(Stage stage) throws Exception {
+			Parent root = FXMLLoader.load(getClass().getResource("/view/main.fxml"));
+			
+			stage.setTitle("PIN-Generator DPMA");
+			stage.setScene(new Scene(root, 600, 400));
+			stage.show();
 		}
 	}
-	
-	public static void main(String[] args) {
-		launch(args);
-	}
-}
+
+
