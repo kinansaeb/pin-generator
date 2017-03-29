@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.pingen.view.UnlockController">
    <children>
       <Label layoutX="143.0" layoutY="44.0" prefHeight="35.0" prefWidth="315.0" text="DpmaDirektPro-Unlock-Pin" textAlignment="CENTER">
          <font>
@@ -17,6 +17,7 @@
       <Label layoutX="31.0" layoutY="98.0" prefHeight="35.0" prefWidth="85.0" text="Fingerprint:" />
       <TextField layoutX="31.0" layoutY="133.0" prefHeight="31.0" prefWidth="550.0" />
       <Button layoutX="31.0" layoutY="178.0" mnemonicParsing="false" text="PIN Generieren" />
-      <TextArea layoutX="31.0" layoutY="227.0" prefHeight="139.0" prefWidth="550.0" />
+      <TextArea layoutX="31.0" layoutY="219.0" prefHeight="139.0" prefWidth="550.0" />
+      <Button fx:id="backx" layoutX="515.0" layoutY="363.0" mnemonicParsing="false" onAction="#pressButtonx" text="Zurück" />
    </children>
 </AnchorPane>
