@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.pingen.view.Best�tigungController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.pingen.view.VerifierController">
    <children>
       <Label layoutX="112.0" layoutY="41.0" prefHeight="35.0" prefWidth="388.0" text="DpmaDirektPro-Bestätigungs-Pin" textAlignment="CENTER">
          <font>
@@ -24,7 +24,7 @@
       <DatePicker layoutX="31.0" layoutY="200.0" AnchorPane.leftAnchor="31.0" />
       <ComboBox layoutX="300.0" layoutY="200.0" prefWidth="150.0" />
       <Label layoutX="31.0" layoutY="292.0" text="PIN:" AnchorPane.leftAnchor="31.0" />
-      <Button layoutX="516.0" layoutY="360.0" mnemonicParsing="false" text="Zurück" />
+      <Button fx:id="backButton" layoutX="521.0" layoutY="355.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
       
    </children>
 </AnchorPane>

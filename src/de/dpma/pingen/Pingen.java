@@ -1,5 +1,7 @@
 package de.dpma.pingen;
 
+import java.util.logging.Logger;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,6 +10,7 @@ import javafx.stage.Stage;
 
 public class Pingen extends Application {
 	public static Stage stage;
+	private static final Logger log = Logger.getLogger(Pingen.class.getName());
 
 	public static void main(String[] args) {
 		Application.launch(Pingen.class, args);

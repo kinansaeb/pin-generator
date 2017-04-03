@@ -25,7 +25,7 @@ public class MainController {
 	// Wenn Button gedrückt wird, wird scene gewechselt und alte scene
 	// geschlossen
 	@FXML
-	public void pressButton(ActionEvent event) {
+	public void unlockButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("unlock.fxml"));
 
@@ -40,9 +40,9 @@ public class MainController {
 	}
 
 	@FXML
-	public void pressButton2(ActionEvent event) {
+	public void verifierButton(ActionEvent event) {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bestätigung.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("verifier.fxml"));
 			Parent root = (Parent) fxmlLoader.load();
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
@@ -51,5 +51,7 @@ public class MainController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }

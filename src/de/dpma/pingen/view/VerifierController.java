@@ -8,28 +8,39 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class UnlockController {
+public class VerifierController {
 
-	Pingen back = new Pingen();
 	@FXML
-	private Label dpmadirektprounlockpin;
+	private Label dpmadirektprobestätigungspin;
 	@FXML
 	private Label fingerprint;
 	@FXML
+	private Label date;
+	@FXML
+	private Label pin;
+
+	@FXML
 	private TextField fingerprintText;
+	@FXML
+	private DatePicker dateField;
+	@FXML
+	private TextArea pinField;
+
 	@FXML
 	private Button pinGenerate;
 	@FXML
-	private TextArea pinField;
-	@FXML
-	private Button backx;
+	private ComboBox<String> selection;
 
-	// Zurück Button
+	@FXML
+	private Button backButton;
+
 	@FXML
 	public void backButton(ActionEvent event) {
 		try {
@@ -39,18 +50,15 @@ public class UnlockController {
 			Stage stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.show();
-
+			Pingen.stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	// Generieren Button
 	@FXML
-
 	public void generateButton(ActionEvent event) {
-		String fingerprint = fingerprintText.getText().toLowerCase();
-		String erg = Verifier.getDdProUnlockPIN(fingerprint);
-		pinField.setText(erg);
+		String fingerprint = fingerprint.getText().toLowerCase();
+		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
 	}
 }
