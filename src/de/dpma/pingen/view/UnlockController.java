@@ -1,6 +1,7 @@
 package de.dpma.pingen.view;
 
 import de.dpma.pingen.Pingen;
+import de.dpma.pingen.Verifier;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,7 +30,7 @@ public class UnlockController {
 	private Button backx;
 
 	@FXML
-	public void pressButtonx(ActionEvent event) {
+	public void backButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
 
@@ -41,5 +42,12 @@ public class UnlockController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@FXML
+
+	public void generateButton(ActionEvent event) {
+		String fingerprint = fingerprintText.getText().toLowerCase();
+		String erg = Verifier.getDdProUnlockPIN(fingerprint);
 	}
 }
