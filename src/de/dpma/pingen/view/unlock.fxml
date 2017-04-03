@@ -19,5 +19,6 @@
       <Button fx:id="pinGenerate" layoutX="31.0" layoutY="178.0" mnemonicParsing="false" onAction="#generateButton" text="PIN Generieren" />
       <TextArea fx:id="pinField" layoutX="31.0" layoutY="219.0" prefHeight="139.0" prefWidth="550.0" />
       <Button fx:id="backx" layoutX="515.0" layoutY="363.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
+      <Button layoutX="31.0" layoutY="363.0" mnemonicParsing="false" onAction="#copyButton" text="Kopieren" />
    </children>
 </AnchorPane>

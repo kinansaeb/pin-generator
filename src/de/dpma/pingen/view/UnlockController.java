@@ -13,12 +13,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.stage.Stage;
 
 public class UnlockController {
 	public static Stage stage;
 	static Logger log = Logger.getLogger(Pingen.class.getName());
-
+	String copyText;
 	Pingen back = new Pingen();
 	@FXML
 	private Label dpmadirektprounlockpin;
@@ -32,6 +34,8 @@ public class UnlockController {
 	private TextArea pinField;
 	@FXML
 	private Button backx;
+	@FXML
+	private Button copy;
 
 	// Zurück Button
 	@FXML
@@ -57,6 +61,16 @@ public class UnlockController {
 		String fingerprint = fingerprintText.getText().toLowerCase();
 		String erg = Verifier.getDdProUnlockPIN(fingerprint);
 		pinField.setText(erg);
+		copyText = erg;
 		log.info("Pin " + erg + "wird generiert");
+	}
+
+	// Kopieren Button
+	public void copyButton(ActionEvent event) {
+		final Clipboard clipboard = Clipboard.getSystemClipboard();
+		final ClipboardContent content = new ClipboardContent();
+		content.putString(copyText);
+		clipboard.setContent(content);
+		log.info("PIN in Zwischenablage kopiert");
 	}
 }
