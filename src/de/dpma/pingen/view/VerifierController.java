@@ -3,7 +3,8 @@ package de.dpma.pingen.view;
 import java.util.logging.Logger;
 
 import de.dpma.pingen.Pingen;
-import de.dpma.pingen.Verifier;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -38,11 +39,18 @@ public class VerifierController {
 
 	@FXML
 	private Button pinGenerate;
+
+	ObservableList<String> options = FXCollections.observableArrayList("REGISTRATION", "REGISTRATION_CONFIRMATION",
+			"REVOCATION", "REVOCATION_CONFIRMATION", "CERTIFICATE_CHANGE", "ADRESS_CHANGE");
 	@FXML
-	private ComboBox<String> selection;
+	private ComboBox<String> selection = new ComboBox<String>(options);
 
 	@FXML
 	private Button backButton;
+
+	public void initialize() {
+		selection.getItems().addAll(options);
+	}
 
 	@FXML
 	public void backButton(ActionEvent event) {
@@ -59,11 +67,19 @@ public class VerifierController {
 		}
 	}
 
-	@FXML
-	public void generateButton(ActionEvent event) {
-		String fingerprint = fingerprint.getText().toLowerCase();
-		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
-		pinField.setText(erg);
-		log.info("Pin " + erg + "wird generiert");
-	}
+	// @FXML
+	// public void generateButton(ActionEvent event) {
+	// String fingerprint = fingerprint.getText().toLowerCase();
+	// String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
+	// pinField.setText(erg);
+	// log.info("Pin " + erg + "wird generiert");
+	// }
+	//
+	// public void copyButton(ActionEvent event) {
+	// final Clipboard clipboard = Clipboard.getSystemClipboard();
+	// final ClipboardContent content = new ClipboardContent();
+	// content.putString(copyText);
+	// clipboard.setContent(content);
+	// log.info("PIN in Zwischenablage kopiert");
+	// }
 }
