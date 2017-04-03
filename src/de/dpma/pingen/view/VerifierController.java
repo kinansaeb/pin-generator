@@ -1,8 +1,10 @@
 package de.dpma.pingen.view;
 
+import java.util.GregorianCalendar;
 import java.util.logging.Logger;
 
 import de.dpma.pingen.Pingen;
+import de.dpma.pingen.Verifier;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +23,8 @@ import javafx.stage.Stage;
 public class VerifierController {
 	public static Stage stage;
 	static Logger log = Logger.getLogger(Pingen.class.getName());
+	String copyText;
+	Pingen back = new Pingen();
 	@FXML
 	private Label dpmadirektprobestätigungspin;
 	@FXML
@@ -67,14 +71,19 @@ public class VerifierController {
 		}
 	}
 
-	// @FXML
-	// public void generateButton(ActionEvent event) {
-	// String fingerprint = fingerprint.getText().toLowerCase();
-	// String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
-	// pinField.setText(erg);
-	// log.info("Pin " + erg + "wird generiert");
-	// }
-	//
+	@FXML
+	public void generateButton(ActionEvent event) {
+		String fingerprint = fingerprintText.getText().toLowerCase();
+		String art = selection.getValue();
+
+		GregorianCalendar cal = dateField.getValue();
+
+		String avaId = "40000000";
+		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
+		pinField.setText(erg);
+		log.info("Pin " + erg + "wird generiert");
+	}
+
 	// public void copyButton(ActionEvent event) {
 	// final Clipboard clipboard = Clipboard.getSystemClipboard();
 	// final ClipboardContent content = new ClipboardContent();
