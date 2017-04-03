@@ -1,5 +1,7 @@
 package de.dpma.pingen.view;
 
+import java.util.logging.Logger;
+
 import de.dpma.pingen.Pingen;
 import de.dpma.pingen.Verifier;
 import javafx.event.ActionEvent;
@@ -16,7 +18,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class VerifierController {
-
+	public static Stage stage;
+	static Logger log = Logger.getLogger(Pingen.class.getName());
 	@FXML
 	private Label dpmadirektprobestätigungspin;
 	@FXML
@@ -45,12 +48,12 @@ public class VerifierController {
 	public void backButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
-
+			log.info("Scene wird auf Main zurückgesetzt.");
 			Parent root = (Parent) fxmlLoader.load();
-			Stage stage = new Stage();
+			stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.show();
-			Pingen.stage.close();
+			MainController.stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -60,5 +63,7 @@ public class VerifierController {
 	public void generateButton(ActionEvent event) {
 		String fingerprint = fingerprint.getText().toLowerCase();
 		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
+		pinField.setText(erg);
+		log.info("Pin " + erg + "wird generiert");
 	}
 }
