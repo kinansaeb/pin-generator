@@ -62,7 +62,7 @@ public class UnlockController {
 		String erg = Verifier.getDdProUnlockPIN(fingerprint);
 		pinField.setText(erg);
 		copyText = erg;
-		log.info("Pin " + erg + "wird generiert");
+		log.info("Pin " + erg + " wird generiert");
 	}
 
 	// Kopieren Button
