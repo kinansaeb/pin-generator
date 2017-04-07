@@ -11,22 +11,77 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+/**
+ * @author AlBacher
+ * This is the MainController.java of the programm Pin-Generator
+ * <p>
+ * The MainController.java is the main file of the start scene. 
+ * It contains the functions of buttonclick UnlockPin and buttoclick ConfirmationPin.
+ * 
+ * @since JDK 1.0
+ */
 public class MainController {
+
 	static Logger log = Logger.getLogger(Pingen.class.getName());
 	Pingen gen = new Pingen();
+/**
+ * @author AlBacher
+ * The Stage is a new scene that contains different fields
+ * <p>
+ * The  stage generate a new Scene.
+ * This stage generate a Scene that contains the DPMADirektPro field and the Unlockpin Field.
+ * 
+ * @since JavaFX 2.0
+ */
 	public static Stage stage;
-
+/**
+ * @author AlBacher
+ * <p>
+ * The DpmaDirektpropingenerator is the Label of the first scene
+ * <p>
+ * DpmaDirektPro is the name of the Program.
+ * The DpmaDirektpropingenerator is on the first scene at the Top
+ * 
+ * @since JavaFX 2.0
+ */
 	@FXML
 	private Label dpmadirektpropingenerator;
+/**
+ * @author AlBacher
+ * <p>
+ * The UnlockPinButton is a button to load in the next scene
+ * <p>
+ * This Button is on the first scene on the bottom.
+ * If you click it, it will load you in the next scene
+ * 
+ * @since JavaFX 2.0
+ */
 	@FXML
 	private Button unlockPinButton;
+/**
+ * @author AlBacher
+ * <p>
+ * The Confirmationbutton (Bestätigungsbutton) is a button to load in the next scene
+ * <p>
+ * This Button is on the first scene on the bottom.
+ * If you click it, it will load you in the next scene
+ * @since JavaFX 2.0
+ */
 
 	@FXML
 	private Button confirmationPinButton;
 
-	// Wenn Button gedrückt wird, wird scene gewechselt und alte scene
-	// geschlossen
+/**
+ * @author AlBacher
+ * <p>
+ * If the Unlock Button is hit it will load into the next Stage / Scene
+ * <p>
+ * If the Unlock Button is got clicked by mice click it will recognize this click.
+ * Also then it will load you in the next scene.
+ * @return unlock.fxml
+ * @since JavaFX 2.0
+ * @param event
+ */
 	@FXML
 	public void unlockButton(ActionEvent event) {
 		try {
@@ -41,7 +96,17 @@ public class MainController {
 			e.printStackTrace();
 		}
 	}
-
+/**
+ * @author AlBacher
+ * <p>
+ * If the VerifierButton is hit it will load into the next Stage / Scene
+ * <p>
+ * If the Unlock Button is got clicked by mice click it will recognize this click.
+ * Also then it will load you in the next scene.
+ * @return verfier.fxml
+ * @since JavaFX 2.0
+ * @param event
+ */
 	@FXML
 	public void verifierButton(ActionEvent event) {
 		try {

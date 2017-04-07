@@ -7,7 +7,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+/**
+ * @author AlBacher
+ *<p>
+ *The Pingen is the method to load the next Stage
+ *<p>
+ *The Pingen load the next stage by button click. 
+ *After that you can generate a Pin
+ *
+ */
 public class Pingen extends Application {
 	static Logger log = Logger.getLogger(Pingen.class.getName());
 
