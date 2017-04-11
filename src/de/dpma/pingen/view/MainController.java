@@ -90,6 +90,7 @@ public class MainController {
 			Parent root = (Parent) fxmlLoader.load();
 			stage = new Stage();
 			stage.setScene(new Scene(root));
+			stage.setResizable(false);
 			stage.show();
 			gen.stage.close();
 		} catch (Exception e) {

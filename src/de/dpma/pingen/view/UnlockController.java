@@ -120,6 +120,7 @@ public class UnlockController {
 			Parent root = (Parent) fxmlLoader.load();
 			stage = new Stage();
 			stage.setScene(new Scene(root));
+			stage.setResizable(false);
 			stage.show();
 			MainController.stage.close();
 		} catch (Exception e) {

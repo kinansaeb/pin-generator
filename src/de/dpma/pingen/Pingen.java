@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 /**
  * @author AlBacher
  *<p>
@@ -36,6 +37,7 @@ public class Pingen extends Application {
 		AnchorPane content;
 		content = (AnchorPane) loader.load();
 		Scene scene = new Scene(content);
+		stage.setResizable(false);
 		stage.setTitle("PIN-Generator DPMA");
 		stage.setScene(scene);
 		stage.show();

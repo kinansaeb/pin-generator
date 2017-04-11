@@ -161,6 +161,7 @@ public class VerifierController {
 			Parent root = (Parent) fxmlLoader.load();
 			stage = new Stage();
 			stage.setScene(new Scene(root));
+			stage.setResizable(false);
 			stage.show();
 			MainController.stage.close();
 		} catch (Exception e) {
@@ -181,14 +182,10 @@ public class VerifierController {
 	public void generateButton(ActionEvent event) {
 		String fingerprint = fingerprintText.getText().toLowerCase();
 		String art = selection.getValue();
-		//
-		//NOT TESTED
-		//
+		
 		LocalDate calLD = dateField.getValue();
 		GregorianCalendar cal = GregorianCalendar.from(calLD.atStartOfDay(ZoneId.systemDefault()));
-		//
-		//NOT TESTED
-		//
+
 		String avaId = "40000000";
 		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
 		pinField.setText(erg);
