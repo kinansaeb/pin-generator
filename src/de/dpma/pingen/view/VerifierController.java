@@ -1,5 +1,7 @@
 package de.dpma.pingen.view;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.GregorianCalendar;
 import java.util.logging.Logger;
 
@@ -179,9 +181,14 @@ public class VerifierController {
 	public void generateButton(ActionEvent event) {
 		String fingerprint = fingerprintText.getText().toLowerCase();
 		String art = selection.getValue();
-		
-		GregorianCalendar cal = dateField.getValue();
-
+		//
+		//NOT TESTED
+		//
+		LocalDate calLD = dateField.getValue();
+		GregorianCalendar cal = GregorianCalendar.from(calLD.atStartOfDay(ZoneId.systemDefault()));
+		//
+		//NOT TESTED
+		//
 		String avaId = "40000000";
 		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
 		pinField.setText(erg);
