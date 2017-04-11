@@ -6,7 +6,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/KiSaeb/Desktop/Pin-Generator/Java/PinGeneration.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j 2"/>
+	<classpathentry kind="lib" path="src/de/dpma/pingen/PinGeneration.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
