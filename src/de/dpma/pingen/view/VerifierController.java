@@ -204,6 +204,16 @@ public class VerifierController {
 		log.info("Pin " + erg + "wird generiert");
 	}
 
+	/**
+	 * @author AlBacher
+	 *         <p>
+	 *         This is the copybutton it will copy the Pin into the Clipboard of
+	 *         the PC
+	 *         <p>
+	 *         If the Copybutton get clicked by mice it will copy the Content of
+	 *         the Textfield. The Content will copy into the SystemClipboard
+	 * @Since JDK 7.0
+	 */
 	public void copyButton(ActionEvent event) {
 		final Clipboard clipboard = Clipboard.getSystemClipboard();
 		final ClipboardContent content = new ClipboardContent();

@@ -10,14 +10,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.pingen.view.UnlockController">
    <children>
-      <Label layoutX="145.0" layoutY="37.0" prefHeight="35.0" prefWidth="315.0" text="DpmaDirektPro-Unlock-Pin" textAlignment="CENTER">
+      <Label layoutX="119.0" layoutY="37.0" prefHeight="35.0" prefWidth="315.0" text="DpmaDirektPro-Unlock-Pin" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="72.0" prefHeight="35.0" prefWidth="85.0" text="Fingerprint:" AnchorPane.bottomAnchor="235.0" />
       <TextField fx:id="fingerprintText" layoutX="13.0" layoutY="107.0" prefHeight="31.0" prefWidth="526.0" AnchorPane.bottomAnchor="204.0" />
-      <Button fx:id="pinGenerate" layoutX="15.0" layoutY="150.0" mnemonicParsing="false" onAction="#generateButton" text="PIN Generieren">
+      <Button fx:id="pinGenerate" layoutX="13.0" layoutY="158.0" mnemonicParsing="false" onAction="#generateButton" text="PIN Generieren">
          <tooltip>
             <Tooltip text="Klicken Sie hier um Ihren PIN zu generieren." />
          </tooltip></Button>
@@ -25,7 +25,7 @@
          <tooltip>
             <Tooltip text="Klicken Sie hier um zurück zu gelangen." />
          </tooltip></Button>
-      <Button layoutX="17.0" layoutY="290.0" mnemonicParsing="false" onAction="#copyButton" text="Kopieren" AnchorPane.bottomAnchor="21.0">
+      <Button layoutX="13.0" layoutY="290.0" mnemonicParsing="false" onAction="#copyButton" text="Kopieren" AnchorPane.bottomAnchor="21.0">
          <tooltip>
             <Tooltip text="Klicken Sie hier um Ihren PIN in die Zwischenablage zu kopieren." />
          </tooltip></Button>

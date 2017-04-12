@@ -7,35 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
 import javax.xml.bind.DatatypeConverter;
-/**
- * @author AlBacher
- *<p>
- *This is the Verfier class 
- *<p>
- *In this class the pin will be generate.
- *The Pin Generation use different functions to generate a unique Pin
- *@since JDK 1.0
- *@return It returns the Unique Pin
- */
+
 public class Verifier {
 	// private static Log logger = LogFactory.getLog(Verifier.class);
 
 	public Verifier() {
 	}
-/**
- * @author AlBacher
- * <p>
- * This is the Pin generation process 
- * <p>
- * The Pin will be generate by combine different  Things . 
- * It will be generate the unique Pin code.
- * 
- * @param art
- * @param fingerprint
- * @param avaId
- * @param cal
- * @return the Pin Code
- */
+
 	public static String getPIN(String art, String fingerprint, String avaId, GregorianCalendar cal) {
 		SimpleDateFormat dt1 = new SimpleDateFormat("dd.MM.yyyy");
 		String datum = dt1.format(cal.getTime());
