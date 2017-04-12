@@ -44,6 +44,6 @@ public class Pingen extends Application {
 		stage.getIcons().add(new Image("/Lock-icon.png"));
 		stage.setScene(scene);
 		stage.show();
-		stage.close();
+
 	}
 }
