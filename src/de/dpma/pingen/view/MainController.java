@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -96,6 +97,7 @@ public class MainController {
 			stage.setResizable(false);
 			stage.show();
 			stage.setTitle("DPMA Unlock-PIN Generator");
+			stage.getIcons().add(new Image("/Lock-icon.png"));
 			gen.stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -126,6 +128,7 @@ public class MainController {
 			stage.setScene(new Scene(root));
 			stage.show();
 			stage.setTitle("DPMA Verifier-PIN Generator");
+			stage.getIcons().add(new Image("/Lock-icon.png"));
 			gen.stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();

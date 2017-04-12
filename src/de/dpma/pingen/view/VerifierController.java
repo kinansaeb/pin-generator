@@ -20,6 +20,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.stage.Stage;
@@ -172,6 +173,9 @@ public class VerifierController {
 			stage.setScene(new Scene(root));
 			stage.setResizable(false);
 			stage.show();
+			stage.getIcons().add(new Image("/Lock-icon.png"));
+			stage.setTitle("PIN-Generator DPMA");
+			stage.setResizable(false);
 			MainController.stage.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -201,7 +205,7 @@ public class VerifierController {
 		String erg = Verifier.getPIN(art, fingerprint, avaId, cal);
 		copyText = erg;
 		pinField.setText(erg);
-		log.info("Pin " + erg + "wird generiert");
+		log.info("Pin " + erg + " wird generiert");
 	}
 
 	/**

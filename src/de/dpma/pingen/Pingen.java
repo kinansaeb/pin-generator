@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -40,8 +41,9 @@ public class Pingen extends Application {
 		Scene scene = new Scene(content);
 		stage.setResizable(false);
 		stage.setTitle("PIN-Generator DPMA");
-
+		stage.getIcons().add(new Image("/Lock-icon.png"));
 		stage.setScene(scene);
 		stage.show();
+		stage.close();
 	}
 }
